@@ -1,0 +1,453 @@
+@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Global styling start here */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  font-family:'Futura Bold', sans-serif;
+}
+
+ul,li {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'Poppins', sans-serif;}
+
+img {
+  width: 100%;
+  display: block;
+}
+/* Global styling end-here */
+
+/* common-styling start here */
+
+h2 {
+  color: #706a76;
+  font-size: 40px;
+}
+
+.para-style {
+  margin: 25px 0 81px;
+  font-size: 23px;
+  line-height: 40px;
+  color: #5f6065;
+}
+
+.page-no a { color:#9fa0a0; }
+.page-no:first-child { background-color: #2a6699; }
+
+.page-no {
+  padding:20px 25px;
+  background-color: #ededed;
+  transition: all .5s ease;
+}
+
+/* common-styling end here */
+
+/* hover-effect start here */
+@media screen and (min-width:995px) {
+  .navbar-list li a:hover {
+    color: #8cacd4;
+    transition: all .5s ease-in-out;
+  }
+
+  .page-no:hover {
+    background-color: #2a6699;
+    cursor: pointer;
+  }
+
+  .page-no:hover.page-no a { color: white; }
+  
+  .bookstore-list figure a { 
+    display: block;
+    overflow: hidden;
+  }
+
+  .livechat-btn a:hover {
+    background-color:#ededed;
+    color: #2a6699;
+  }
+
+  .bookstore-list figure a img:hover { transform: scale(1.2);}
+
+  figcaption a:hover { color: rgb(23, 179, 226); }
+
+}
+
+/* hover-effect end here */
+
+/* humberger menu */
+.line {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin: 2px 0;
+}
+
+.hamburger-lines{display: none;}
+
+/* humberger menu end */
+
+/* header start here */
+.wrapper {
+  max-width: 1360px;
+  width: 92.5%;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url("/assets/img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  padding:40px 0 428px;
+  position: relative;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 300;
+  color: #fafefd;
+  letter-spacing: 2px;
+  text-shadow: 3px 5px 3px rgb(50, 50, 50);
+}
+
+.heading { margin-left: 5%; }
+.navbar-list li { padding: 26px 0; }
+
+.heading span {
+  margin: 18px 0;
+  color: #e3f0ed;
+  font-size: 25px;
+  text-shadow: 2px 2px 3px rgb(75, 74, 74);
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.navbar-list {
+  border-bottom: 12px solid #056497;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-list li a {
+  color: #f7f4f0;
+  font-size: 24px;
+  transition: all .5s ease-in-out;
+}
+/* header ends here */
+
+/* bookstore -section start here */
+
+.bookstore { padding: 103px 0 80px; }
+
+/* .bookstore-list figure { max-width: 290px; } */
+
+.bookstore-list figure img {
+  transition: all 0.5s ease;
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+}
+
+.bookstore-list figure a img{ transition: all 0.5s ease;  }
+.bookstore-list { display: inline-block;}
+.bookstore-gallery {
+  margin: 60px 0;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.bookstore-list:not(:nth-child(4n)) { margin-right:2%; }  
+.bookstore-list {
+  flex-basis:23.5%;
+  margin-bottom: 40px; }
+
+figcaption a {
+  color:#49423f;
+  font-size: 20px;
+  transition: all 0.5s ease;
+  font-weight: 800px;
+}
+
+figcaption {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.page-list {
+  display: flex;
+  justify-content: center;
+}
+
+.page-no:not(:last-child) { margin-right: 10px; }
+
+/* bookstore section end here */
+
+
+/* Help-wrap section start here */
+.help .wrapper { 
+  padding: 57px 0;
+  display: flex;  
+  justify-content: center;
+  background-color: #076599; 
+}
+
+.logo-img img {width: 100%;}
+.logo-img { margin-right: 5%;}
+.help-info { width: 62.2%; }
+
+.help-info h3 { 
+  color: #e3f0ed;
+  font-size: 40px;
+}
+
+.help-info p {
+  margin: 27px 0;
+  color:#f8fefb;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.livechat-btn a {
+  padding: 17px 35px;
+  border: 1px solid white;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  transition: all .5s ease-in-out;
+}
+
+/* help-wrap section ends here */
+
+/* footer start -here */
+ 
+.footer {  
+  background-color: #333333;
+  margin-top: 84px;
+}
+
+.footer .wrapper { text-align: center; }
+
+.footer-part {
+  padding: 20px 0 10px;
+  color: white;
+  font-size: 20px;
+}
+
+/* footer end here */
+
+
+@media screen and (max-width:995px) {
+  .bookstore-list:not(:nth-child(4n)) { margin:0; }
+  .bookstore-list:not(:nth-child(3n)) { margin-right: 3%; }
+  .bookstore-list { flex-basis:31.3%;}
+}
+
+@media screen and (max-width:768px) {
+  .bookstore { padding: 30px 0 30px }
+  .header { padding: 40px 0 300px; }
+  .footer-part { font-size: 13px; }
+  figcaption { padding: 20px 0; }
+  figcaption a { font-size: 18px; }
+  .heading p { font-size: 18px; }
+  h1 { font-size: 35px; }
+  h2 { font-size: 25px; }
+  .bookstore-list { flex-basis:48%;}
+  .bookstore-list:not(:nth-child(4n)) { margin-right:0; }
+  .bookstore-list:not(:nth-child(3n)) { margin-right: 0; }
+  .bookstore-list:nth-child(2n+1) { margin-right: 3%; }
+  .help-info h3 { font-size: 28px; }
+  .navbar-list { display: none; }
+  .page-no { padding: 15px 20px; }
+
+  .para-style { 
+    margin-bottom: 10px;
+    font-size: 15px; 
+    line-height: 30px;
+  }
+
+  .hamburger-lines { 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3%;
+    left:3%;
+    z-index: 1;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .help-info p { 
+    font-size: 13px;
+    line-height: 25px;
+  }
+  
+  .livechat-btn a {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  
+  .header { padding: 40px 0 250px; }
+  .bookstore-list { width: 100%;}
+  .bookstore-list:not(:nth-child(2n)) { margin-right: 0; }
+  .bookstore-list:nth-child(2n) { margin-right:0;}
+  .bookstore-list:nth-child(2n+1) { margin-right: 4%; }
+  .navbar-list li a { font-size: 10px; }
+  .navbar-list li { padding: 10px 0; }
+  
+  .bookstore-list figure a img { max-height: 270px; }
+  figcaption a { font-size: 15px; }
+  .help-info { width: 70%; }
+  .footer-part { font-size: 12px; }
+  .help-info .para-style { margin: 10px 0; }
+  .help-info h3 { font-size: 23px; }
+
+  .logo-img img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .help .wrapper { padding: 20px 0; }
+  .header { padding: 30px 0 200px; }
+  .heading span { font-size: 15px; }
+  h2 { font-size:20px; }
+  .bookstore-gallery { margin:30px 0; }
+  .bookstore-list:not(:nth-child(2n)) { margin-right: 0; }
+  .bookstore-list:nth-child(2n) { margin-right:0;}
+  .bookstore-list:nth-child(2n+1) { margin-right: 0; }
+  .page-no { padding: 10px 15px; }
+  .footer-part { font-size: 10px; }
+
+  .help-info { 
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .help .wrapper { 
+    flex-direction:column; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bookstore-list { 
+    flex-basis:100%; 
+    margin-bottom: 0 ;
+  }
+
+  .para-style { 
+    font-size: 12px; 
+    line-height: 18px;
+  }  
+}
